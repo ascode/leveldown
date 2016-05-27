@@ -1,7 +1,7 @@
 {
   "name": "leveldown",
   "description": "A Node.js LevelDB binding, primary backend for LevelUP",
-  "version": "1.4.4",
+  "version": "1.4.4-custom",
   "contributors": [
     "Rod Vagg <r@va.gg> (https://github.com/rvagg)",
     "John Chesley <john@chesl.es> (https://github.com/chesles/)",
@@ -49,10 +49,10 @@
     "tape": "~4.3.0"
   },
   "scripts": {
-    "install": "prebuild --install",
+    "install": "prebuild -b 5.10.0 --install --verbose",
     "test": "tape test/*-test.js | faucet",
-    "rebuild": "prebuild --compile",
-    "prebuild": "prebuild --all --strip --verbose"
+    "rebuild": "prebuild --compile --verbose",
+    "prebuild": "prebuild -b 5.10.0 --strip --verbose"
   },
   "license": "MIT",
   "gypfile": true
